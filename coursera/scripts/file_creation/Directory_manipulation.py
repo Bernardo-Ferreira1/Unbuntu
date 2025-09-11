@@ -1,0 +1,18 @@
+#A função new_directory cria um novo diretório dentro do diretório de trabalho atual, cria um novo arquivo vazio dentro do novo diretório e retorna a lista de arquivos nesse diretório. Preencha as lacunas para criar um arquivo "script.py" no diretório "PythonPrograms". 
+
+import os
+
+def new_directory(directory, filename):
+  # Before creating a new directory, check to see if it already exists
+  if os.path.isdir(directory) == False:
+    os.mkdir(directory)
+
+  # Create the new file inside of the new directory
+  os.chdir(directory)
+  with open(filename, "w") as file:
+    pass
+
+  # Return the list of files in the new directory
+  return os.listdir()
+
+print(new_directory("PythonPrograms", "script.py"))
